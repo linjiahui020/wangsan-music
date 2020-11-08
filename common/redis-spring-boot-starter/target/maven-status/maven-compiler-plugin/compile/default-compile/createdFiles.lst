@@ -1,0 +1,7 @@
+com\jh\common\redis\properties\CacheManagerProperties$CacheConfig.class
+com\jh\common\redis\properties\CacheManagerProperties.class
+com\jh\common\redis\template\RedisRepository.class
+com\jh\common\redis\constant\RedisToolsConstant.class
+com\jh\common\redis\RedisAutoConfigure.class
+META-INF\spring-configuration-metadata.json
+com\jh\common\redis\util\RedisObjectSerializer.class

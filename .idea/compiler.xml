@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="business" />
+        <module name="redis-spring-boot-starter" />
+        <module name="commoncore" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="business" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="commoncore" target="1.8" />
+      <module name="eryun_music" target="1.8" />
+      <module name="redis-spring-boot-starter" target="1.8" />
+      <module name="swagger2springbootstarter" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eryun_music" options="" />
+    </option>
+  </component>
+</project>

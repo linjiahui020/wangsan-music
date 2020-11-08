@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/business/business.iml" filepath="$PROJECT_DIR$/business/business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common-core/commoncore.iml" filepath="$PROJECT_DIR$/common/common-core/commoncore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eryun_music.iml" filepath="$PROJECT_DIR$/eryun_music.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/redis-spring-boot-starter/redis-spring-boot-starter.iml" filepath="$PROJECT_DIR$/common/redis-spring-boot-starter/redis-spring-boot-starter.iml" />
+    </modules>
+  </component>
+</project>

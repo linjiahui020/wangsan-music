@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jh.business.module.music.dao.TSongRepository">
+
+	<resultMap id="tSongMap" type="com.jh.business.module.music.domain.TSong">
+		<id column="id" property="id" />
+		<result column="singer_id" property="singerId"/>
+		<result column="song_name" property="songName"/>
+		<result column="song_img" property="songImg"/>
+		<result column="music_url" property="musicUrl"/>
+		<result column="mv_url" property="mvUrl"/>
+		<association property="tSinger" column="singer_id" select="com.jh.business.module.singer.dao.TSingerRepository.selectIdAndNameById"/>
+	</resultMap>
+	
+	<resultMap id="TSingerResult" type="com.jh.business.module.singer.domain.TSinger">
+		<result column="id" property="id" />
+		<result column="singer_name" property="singerName" />
+		<result column="description" property="description" />
+		<result column="head_img_url" property="headImgUrl" />
+	</resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "zlt.cache-manager",
+      "type": "com.jh.common.redis.properties.CacheManagerProperties",
+      "sourceType": "com.jh.common.redis.properties.CacheManagerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "zlt.cache-manager.configs",
+      "type": "java.util.List<com.jh.common.redis.properties.CacheManagerProperties$CacheConfig>",
+      "sourceType": "com.jh.common.redis.properties.CacheManagerProperties"
+    }
+  ],
+  "hints": []
+}
