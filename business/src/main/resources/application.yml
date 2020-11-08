@@ -30,6 +30,20 @@ spring:
     multipart:
       max-file-size: 100MB # 最大支持文件大小
       max-request-size: 100MB # 最大支持请求大小
+  mail:  #发送邮件
+    #这个需要根据你开启的服务的邮箱是QQ邮箱,还是网易邮箱区分
+    #smtp.163.com为网易邮箱,smtp.qq.com为QQ邮箱
+    host: smtp.qq.com
+    username: 1161640194@qq.com #你开通SMTP服务的邮箱账号
+    password: lnaaajimewtehece #刚刚生成的授权码,不是邮箱密码
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    default-encoding: UTF-8
 server:
   port: 8088
 ljh-config:
@@ -68,4 +82,5 @@ fdfs:
   trackerList: #TrackerList参数,支持多个，我这里只有一个，如果有多个在下方加- x.x.x.x:port
     - 47.115.72.55:22122
 #    - 192.168.8.102:22122
+
 

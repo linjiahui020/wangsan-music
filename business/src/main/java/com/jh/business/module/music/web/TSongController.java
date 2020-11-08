@@ -9,6 +9,7 @@ import com.jh.business.module.singer.domain.TSinger;
 import com.jh.business.module.singer.service.TSingerService;
 import com.jh.common.domain.AjaxResult;
 import com.jh.common.domain.PageResult;
+import io.swagger.annotations.Api;
 import org.apache.commons.collections.MapUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +25,7 @@ import java.util.Map;
  * @Date: 2020/11/7 18:24
  * @Version:0.0.1
  */
+@Api(tags = "歌曲模块api")
 @RestController
 @RequestMapping("/music")
 public class TSongController {

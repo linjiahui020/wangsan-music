@@ -28,7 +28,7 @@ import java.io.ByteArrayOutputStream;
  * @Version:0.0.1
  */
 @RestController
-@Api(tags = "用户模块")
+@Api(tags = "用户模块api")
 @RequestMapping(value = "/user")
 public class UserController {
 
@@ -104,7 +104,5 @@ public class UserController {
         responseOutputStream.flush();
         responseOutputStream.close();
     }
-
-    public AjaxResult 
 
 }

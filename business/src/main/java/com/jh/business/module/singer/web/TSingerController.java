@@ -9,6 +9,9 @@ import com.jh.business.module.singer.domain.TSinger;
 import com.jh.business.module.singer.service.TSingerService;
 import com.jh.common.domain.AjaxResult;
 import com.jh.common.domain.PageResult;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.apache.commons.collections.MapUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +27,7 @@ import java.util.Map;
  * @Date: 2020/11/7 11:12
  * @Version:0.0.1
  */
+@Api(tags = "歌手模块api")
 @RestController
 @RequestMapping("/singer")
 public class TSingerController {
@@ -38,8 +42,9 @@ public class TSingerController {
      * 根据歌手名字获取歌曲
      * @return
      */
+    @ApiOperation(value = "根据歌手名字获取歌曲(含分页)", notes = "根据歌手名字获取歌曲(含分页)")
     @GetMapping("/list")
-    public AjaxResult getList(@RequestParam Map<String,Object> params){
+    public AjaxResult getList(@ApiParam("包含page,limit,singerName")@RequestParam Map<String,Object> params){
         Page<TSong> page = new Page<>(MapUtils.getInteger(params, "page"), MapUtils.getInteger(params, "limit"));
         TSinger singer = tSingerService.getOne(new QueryWrapper<TSinger>().eq("singer_name",params.get("singerName")));
         if(singer == null){
@@ -56,7 +61,7 @@ public class TSingerController {
      * @return
      */
     @GetMapping("/info")
-    public AjaxResult getInfoByName(@RequestParam Map<String,Object> params){
+    public AjaxResult getInfoByName(@ApiParam("参数map--传入歌手id")@RequestParam Map<String,Object> params){
         if(params.containsKey("id")){
             return AjaxResult.success(tSingerService.getOne(new QueryWrapper<TSinger>().eq("id",params.get("id"))));
         }
