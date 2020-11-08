@@ -10,6 +10,8 @@ import com.jh.business.module.singer.service.TSingerService;
 import com.jh.common.domain.AjaxResult;
 import com.jh.common.domain.PageResult;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.apache.commons.collections.MapUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,8 +41,9 @@ public class TSongController {
      * 根据搜索关键字获取歌曲
      * @return
      */
+    @ApiOperation(value = "根据搜索关键字(歌曲或歌手)获取歌曲", notes = "根据搜索关键字(歌曲或歌手)获取歌曲")
     @GetMapping("/search")
-    public AjaxResult getList(@RequestParam Map<String,Object> params){
+    public AjaxResult getList(@ApiParam("包含page,limit,keyWord")@RequestParam Map<String,Object> params){
         Page<TSong> page = new Page<>(MapUtils.getInteger(params, "page"), MapUtils.getInteger(params, "limit"));
         List<TSinger> singers = tSingerService.list(new QueryWrapper<TSinger>().like("singer_name",params.get("keyWord")));
         if(singers != null && !singers.isEmpty()){

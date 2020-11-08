@@ -44,7 +44,7 @@ public class TSingerController {
      */
     @ApiOperation(value = "根据歌手名字获取歌曲(含分页)", notes = "根据歌手名字获取歌曲(含分页)")
     @GetMapping("/list")
-    public AjaxResult getList(@ApiParam("包含page,limit,singerName")@RequestParam Map<String,Object> params){
+    public AjaxResult getList(@ApiParam("参数包含page,limit,singerName(歌手名字)")@RequestParam Map<String,Object> params){
         Page<TSong> page = new Page<>(MapUtils.getInteger(params, "page"), MapUtils.getInteger(params, "limit"));
         TSinger singer = tSingerService.getOne(new QueryWrapper<TSinger>().eq("singer_name",params.get("singerName")));
         if(singer == null){
@@ -60,8 +60,9 @@ public class TSingerController {
      * 返回歌手信息
      * @return
      */
+    @ApiOperation(value = "根据歌手id返回歌手信息", notes = "根据歌手id返回歌手信息")
     @GetMapping("/info")
-    public AjaxResult getInfoByName(@ApiParam("参数map--传入歌手id")@RequestParam Map<String,Object> params){
+    public AjaxResult getInfoByName(@ApiParam("参数包含歌手id")@RequestParam Map<String,Object> params){
         if(params.containsKey("id")){
             return AjaxResult.success(tSingerService.getOne(new QueryWrapper<TSinger>().eq("id",params.get("id"))));
         }

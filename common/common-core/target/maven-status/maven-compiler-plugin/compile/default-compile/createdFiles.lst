@@ -1,3 +1,4 @@
+com\jh\common\domain\PageResult.class
 com\jh\common\constant\Constants.class
 com\jh\common\constant\HttpStatus.class
 com\jh\common\domain\AjaxResult.class
@@ -6,5 +7,6 @@ com\jh\common\constant\ScheduleConstants$Status.class
 com\jh\common\utils\RegularExpressionUtils.class
 com\jh\common\utils\AccessAddressUtils.class
 com\jh\common\constant\GenConstants.class
+com\jh\common\domain\PageResult$PageResultBuilder.class
 com\jh\common\constant\ScheduleConstants.class
 com\jh\common\constant\UserConstants.class
